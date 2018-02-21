@@ -1,0 +1,52 @@
+{
+  "id": "mta",
+  "name": "MTA",
+  "description": "The Metropolitan Transportation Authority operates public transit in the greater New York City region.  This feed includes the NYC Transit Subway, NYCT and MTA Buses, Long Island Rail Road, Metro-North Railroad, and MTA-operated (NY intrastate) bridges and tunnels.",
+  "url": "http://web.mta.info/status/serviceStatus.txt",
+  "maxCache": 300,
+  "divisions": [
+    {
+      "tag": "subway",
+      "code": "subway",
+      "name": "Subway"
+    },
+    {
+      "tag": "bus",
+      "code": "bus",
+      "name": "NYC Buses"
+    },
+    {
+      "tag": "LIRR",
+      "code": "lirr",
+      "name": "Long Island Rail Road"
+    },
+    {
+      "tag": "MetroNorth",
+      "code": "mnr",
+      "name": "Metro-North Railroad"
+    },
+    {
+      "tag": "BT",
+      "code": "roads",
+      "name": "Bridges & Tunnels"
+    }
+  ],
+  "eventDelimiters": [
+    {
+      "delim": "TitlePlannedWork",
+      "name": "Planned Work"
+    },
+    {
+      "delim": "TitleServiceChange",
+      "name": "Service Change"
+    },
+    {
+      "delim": "TitleDelay",
+      "name": "Delays"
+    },
+    {
+      "delim": "TitleSuspended",
+      "name": "Suspended"
+    }
+  ]
+}

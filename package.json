@@ -1,0 +1,29 @@
+{
+  "name": "right-track-transit-mta",
+  "version": "1.0.0",
+  "description": "Right Track Transit Agency: Metropolitan Transportation Authority",
+  "author": "David Waring <dev@davidwaring.net> (https://davidwaring.net)",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "docs": "jsdoc -c jsdoc.json --readme README.md --template $NODE_PATH/@dwaring87/docdash"
+  },
+  "dependencies": {
+    "htmlclean": "^3.0.8",
+    "right-track-transit": "^1.0.0",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.5.5",
+    "@dwaring87/docdash": "^0.4.1"
+  },
+  "homepage": "https://righttrack.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/right-track/right-track-transit-mta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/right-track/right-track-transit-mta/issues",
+    "email": "dev@davidwaring.net"
+  }
+}
