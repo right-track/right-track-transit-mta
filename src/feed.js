@@ -5,7 +5,6 @@ const path = require('path');
 const parseXML = require('xml2js').parseString;
 const cleanHTML = require('htmlclean');
 const props = require('../agency.json');
-const propsDir = path.dirname(require.resolve('../agency.json'));
 
 const TF = require('right-track-transit/src/TransitFeed');
 const TransitFeed = TF.TransitFeed;
@@ -123,6 +122,9 @@ function _parse(xml, callback) {
  */
 function _parseDivisions(service) {
 
+  // Load the Transit Agency
+  const TA = require('./index.js');
+
   // Divisions to return
   let rtn = [];
 
@@ -132,7 +134,7 @@ function _parseDivisions(service) {
     let definition = definitions[i];
 
     // Set Icon Path
-    let icon = path.normalize(propsDir + '/' + definition.icon);
+    let icon = TA.getDivisionIconPath(definition.code);
 
     // Create the Division
     let td = new TransitDivision(definition.code, definition.name, icon);
@@ -158,6 +160,9 @@ function _parseDivisions(service) {
  * @private
  */
 function _parseLines(lines) {
+
+  // Load the Transit Agency
+  const TA = require('./index.js');
 
   // Lines to return
   let rtn = [];
@@ -185,14 +190,8 @@ function _parseLines(lines) {
     code = code.replace(/ /g, "-");
 
     // Set Line Colors
-    let backgroundColor = props.lines[0].backgroundColor;
-    let textColor = props.lines[0].textColor;
-    for ( let j = 0; j < props.lines.length; j++ ) {
-      if ( props.lines[j].name === name ) {
-        backgroundColor = props.lines[j].backgroundColor;
-        textColor = props.lines[j].textColor;
-      }
-    }
+    let backgroundColor = TA.getLineBackgroundColor(code);
+    let textColor = TA.getLineTextColor(code);
 
     // Create the Line
     let tl = new TransitLine(code, name, backgroundColor, textColor);

@@ -42,6 +42,48 @@ class MTA extends RightTrackTransitAgency {
     feed(callback);
   }
 
+  /**
+   * Get the local absolute path to the icon for the specified division
+   * @param {string} division Transit Division Code
+   * @returns {string|undefined}
+   */
+  getDivisionIconPath(division) {
+    for ( let i = 0; i < props.divisions.length; i++ ) {
+      if ( props.divisions[i].code === division ) {
+        return path.normalize(propsDir + '/' + props.divisions[i].icon);
+      }
+    }
+    return undefined;
+  }
+
+  /**
+   * Get the background color for the specified line
+   * @param {string} line Transit Line Code
+   * @returns {string}
+   */
+  getLineBackgroundColor(line) {
+    for ( let j = 0; j < props.lines.length; j++ ) {
+      if ( props.lines[j].code === line ) {
+        return props.lines[j].backgroundColor;
+      }
+    }
+    return props.lines[0].backgroundColor;
+  }
+
+  /**
+   * Get the text color for the specified line
+   * @param {string} line Transit Line Code
+   * @returns {string}
+   */
+  getLineTextColor(line) {
+    for ( let j = 0; j < props.lines.length; j++ ) {
+      if ( props.lines[j].code === line ) {
+        return props.lines[j].backgroundColor;
+      }
+    }
+    return props.lines[0].backgroundColor;
+  }
+
 }
 
 
