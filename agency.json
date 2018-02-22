@@ -2,33 +2,201 @@
   "id": "mta",
   "name": "MTA",
   "description": "The Metropolitan Transportation Authority operates public transit in the greater New York City region.  This feed includes the NYC Transit Subway, NYCT and MTA Buses, Long Island Rail Road, Metro-North Railroad, and MTA-operated (NY intrastate) bridges and tunnels.",
+  "icon": "./img/mta.png",
   "url": "http://web.mta.info/status/serviceStatus.txt",
   "maxCache": 300,
   "divisions": [
     {
       "tag": "subway",
       "code": "subway",
-      "name": "Subway"
+      "name": "Subway",
+      "icon": "./img/subway.png"
     },
     {
       "tag": "bus",
       "code": "bus",
-      "name": "NYC Buses"
+      "name": "NYC Buses",
+      "icon": "./img/bus.png"
     },
     {
       "tag": "LIRR",
       "code": "lirr",
-      "name": "Long Island Rail Road"
+      "name": "Long Island Rail Road",
+      "icon": "./img/lirr.png"
     },
     {
       "tag": "MetroNorth",
       "code": "mnr",
-      "name": "Metro-North Railroad"
+      "name": "Metro-North Railroad",
+      "icon": "./img/mnr.png"
     },
     {
       "tag": "BT",
       "code": "roads",
-      "name": "Bridges & Tunnels"
+      "name": "Bridges & Tunnels",
+      "icon": "./img/roads.png"
+    }
+  ],
+  "lines": [
+    {
+      "name": "default",
+      "backgroundColor": "#3d3d3d",
+      "textColor": "#e7e7e7"
+    },
+    {
+      "name": "123",
+      "backgroundColor": "#EE352E",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "456",
+      "backgroundColor": "#00933C",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "7",
+      "backgroundColor": "#B933AD",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "ACE",
+      "backgroundColor": "#2850AD",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "BDFM",
+      "backgroundColor": "#FF6319",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "G",
+      "backgroundColor": "#6CBE45",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "JZ",
+      "backgroundColor": "#996633",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "L",
+      "backgroundColor": "#A7A9AC",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "NQRW",
+      "backgroundColor": "#FCCC0A",
+      "textColor": "#343434"
+    },
+    {
+      "name": "S",
+      "backgroundColor": "#808183",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "SIR",
+      "backgroundColor": "#2850AD",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Babylon",
+      "backgroundColor": "#00985F",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "City Terminal Zone",
+      "backgroundColor": "#4D5357",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Far Rockaway",
+      "backgroundColor": "#6E3219",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Hempstead",
+      "backgroundColor": "#CE8E00",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Long Beach",
+      "backgroundColor": "#FF6319",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Montauk",
+      "backgroundColor": "#006983",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Oyster Bay",
+      "backgroundColor": "#00AF3F",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Port Jefferson",
+      "backgroundColor": "#0039A6",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Port Washington",
+      "backgroundColor": "#C60C30",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Ronkonkoma",
+      "backgroundColor": "#A626AA",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "West Hempstead",
+      "backgroundColor": "#00A1DE",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Hudson",
+      "backgroundColor": "#009B3A",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Harlem",
+      "backgroundColor": "#0039A6",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Wassaic",
+      "backgroundColor": "#0039A6",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "New Haven",
+      "backgroundColor": "#EE0034",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "New Canaan",
+      "backgroundColor": "#EE0034",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Danbury",
+      "backgroundColor": "#EE0034",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Waterbury",
+      "backgroundColor": "#EE0034",
+      "textColor": "#E7E7E7"
+    },
+    {
+      "name": "Pascack Valley",
+      "backgroundColor": "#8E258D",
+      "textColor": ""
+    },
+    {
+      "name": "Port Jervis",
+      "backgroundColor": "#FF7900",
+      "textColor": "#E7E7E7"
     }
   ],
   "eventDelimiters": [
@@ -47,6 +215,330 @@
     {
       "delim": "TitleSuspended",
       "name": "Suspended"
+    }
+  ],
+  "eventTokens": [
+    {
+      "token": "[1]",
+      "replace": "<span class='circle' style='background: #EE352E; color: white'>1</span>"
+    },
+    {
+      "token": "[2]",
+      "replace": "<span class='circle' style='background: #EE352E; color: white'>2</span>"
+    },
+    {
+      "token": "[3]",
+      "replace": "<span class='circle' style='background: #EE352E; color: white'>3</span>"
+    },
+    {
+      "token": "[4]",
+      "replace": "<span class='circle' style='background: #EE352E; color: white'>3</span>"
+    },
+    {
+      "token": "[5]",
+      "replace": "<span class='circle' style='background: #00933C; color: white'>5</span>"
+    },
+    {
+      "token": "[6]",
+      "replace": "<span class='circle' style='background: #00933C; color: white'>6</span>"
+    },
+    {
+      "token": "[7]",
+      "replace": "<span class='circle' style='background: #B933AD; color: white'>7</span>"
+    },
+    {
+      "token": "[A]",
+      "replace": "<span class='circle' style='background: #2850AD; color: white'>A</span>"
+    },
+    {
+      "token": "[B]",
+      "replace": "<span class='circle' style='background: #FF6319; color: white'>B</span>"
+    },
+    {
+      "token": "[C]",
+      "replace": "<span class='circle' style='background: #2850AD; color: white'>C</span>"
+    },
+    {
+      "token": "[D]",
+      "replace": "<span class='circle' style='background: #FF6319; color: white'>D</span>"
+    },
+    {
+      "token": "[E]",
+      "replace": "<span class='circle' style='background: #2850AD; color: white'>E</span>"
+    },
+    {
+      "token": "[F]",
+      "replace": "<span class='circle' style='background: #FF6319; color: white'>F</span>"
+    },
+    {
+      "token": "[G]",
+      "replace": "<span class='circle' style='background: #6CBE45; color: white'>G</span>"
+    },
+    {
+      "token": "[J]",
+      "replace": "<span class='circle' style='background: #996633; color: white'>J</span>"
+    },
+    {
+      "token": "[L]",
+      "replace": "<span class='circle' style='background: #A7A9AC; color: white'>L</span>"
+    },
+    {
+      "token": "[M]",
+      "replace": "<span class='circle' style='background: #FF6319; color: white'>M</span>"
+    },
+    {
+      "token": "[N]",
+      "replace": "<span class='circle' style='background: #FCCC0A; color: black'>N</span>"
+    },
+    {
+      "token": "[Q]",
+      "replace": "<span class='circle' style='background: #FCCC0A; color: black'>Q</span>"
+    },
+    {
+      "token": "[R]",
+      "replace": "<span class='circle' style='background: #FCCC0A; color: black'>R</span>"
+    },
+    {
+      "token": "[S]",
+      "replace": "<span class='circle' style='background: #808183; color: white'>S</span>"
+    },
+    {
+      "token": "[W]",
+      "replace": "<span class='circle' style='background: #FCCC0A; color: black'>W</span>"
+    },
+    {
+      "token": "[Z]",
+      "replace": "<span class='circle' style='background: #996633; color: white'>Z</span>"
+    },
+    {
+      "token": "[SIR]",
+      "replace": "<span class='circle' style='background: #2850AD; color: white'><span style='font-size: 60%;'>SIR</span></span>"
+    },
+    {
+      "token": "[1S]",
+      "replace": "<span class='square' style='background: #EE352E; color: white'>1</span>"
+    },
+    {
+      "token": "[2S]",
+      "replace": "<span class='square' style='background: #EE352E; color: white'>2</span>"
+    },
+    {
+      "token": "[3S]",
+      "replace": "<span class='square' style='background: #EE352E; color: white'>3</span>"
+    },
+    {
+      "token": "[4S]",
+      "replace": "<span class='square' style='background: #EE352E; color: white'>3</span>"
+    },
+    {
+      "token": "[5S]",
+      "replace": "<span class='square' style='background: #00933C; color: white'>5</span>"
+    },
+    {
+      "token": "[6S]",
+      "replace": "<span class='square' style='background: #00933C; color: white'>6</span>"
+    },
+    {
+      "token": "[7S]",
+      "replace": "<span class='square' style='background: #B933AD; color: white'>7</span>"
+    },
+    {
+      "token": "[AS]",
+      "replace": "<span class='square' style='background: #2850AD; color: white'>A</span>"
+    },
+    {
+      "token": "[BS]",
+      "replace": "<span class='square' style='background: #FF6319; color: white'>B</span>"
+    },
+    {
+      "token": "[CS]",
+      "replace": "<span class='square' style='background: #2850AD; color: white'>C</span>"
+    },
+    {
+      "token": "[DS]",
+      "replace": "<span class='square' style='background: #FF6319; color: white'>D</span>"
+    },
+    {
+      "token": "[ES]",
+      "replace": "<span class='square' style='background: #2850AD; color: white'>E</span>"
+    },
+    {
+      "token": "[FS]",
+      "replace": "<span class='square' style='background: #FF6319; color: white'>F</span>"
+    },
+    {
+      "token": "[GS]",
+      "replace": "<span class='square' style='background: #6CBE45; color: white'>G</span>"
+    },
+    {
+      "token": "[JS]",
+      "replace": "<span class='square' style='background: #996633; color: white'>J</span>"
+    },
+    {
+      "token": "[LS]",
+      "replace": "<span class='square' style='background: #A7A9AC; color: white'>L</span>"
+    },
+    {
+      "token": "[MS]",
+      "replace": "<span class='square' style='background: #FF6319; color: white'>M</span>"
+    },
+    {
+      "token": "[NS]",
+      "replace": "<span class='square' style='background: #FCCC0A; color: black'>N</span>"
+    },
+    {
+      "token": "[QS]",
+      "replace": "<span class='square' style='background: #FCCC0A; color: black'>Q</span>"
+    },
+    {
+      "token": "[RS]",
+      "replace": "<span class='square' style='background: #FCCC0A; color: black'>R</span>"
+    },
+    {
+      "token": "[SS]",
+      "replace": "<span class='square' style='background: #808183; color: white'>S</span>"
+    },
+    {
+      "token": "[WS]",
+      "replace": "<span class='square' style='background: #FCCC0A; color: black'>W</span>"
+    },
+    {
+      "token": "[ZS]",
+      "replace": "<span class='square' style='background: #996633; color: white'>Z</span>"
+    },
+    {
+      "token": "[SIRS]",
+      "replace": "<span class='square' style='background: #2850AD; color: white'><span style='font-size: 60%;'>SIR</span></span>"
+    },
+    {
+      "token": "[1D]",
+      "replace": "<span class='diamond' style='background: #EE352E; color: white'><span>1</span></span>"
+    },
+    {
+      "token": "[2D]",
+      "replace": "<span class='diamond' style='background: #EE352E; color: white'><span>2</span></span>"
+    },
+    {
+      "token": "[3D]",
+      "replace": "<span class='diamond' style='background: #EE352E; color: white'><span>3</span></span>"
+    },
+    {
+      "token": "[4D]",
+      "replace": "<span class='diamond' style='background: #EE352E; color: white'><span>3</span></span>"
+    },
+    {
+      "token": "[5D]",
+      "replace": "<span class='diamond' style='background: #00933C; color: white'><span>5</span></span>"
+    },
+    {
+      "token": "[6D]",
+      "replace": "<span class='diamond' style='background: #00933C; color: white'><span>6</span></span>"
+    },
+    {
+      "token": "[7D]",
+      "replace": "<span class='diamond' style='background: #B933AD; color: white'><span>7</span></span>"
+    },
+    {
+      "token": "[AD]",
+      "replace": "<span class='diamond' style='background: #2850AD; color: white'><span>A</span></span>"
+    },
+    {
+      "token": "[BD]",
+      "replace": "<span class='diamond' style='background: #FF6319; color: white'><span>B</span></span>"
+    },
+    {
+      "token": "[CD]",
+      "replace": "<span class='diamond' style='background: #2850AD; color: white'><span>C</span></span>"
+    },
+    {
+      "token": "[DD]",
+      "replace": "<span class='diamond' style='background: #FF6319; color: white'><span>D</span></span>"
+    },
+    {
+      "token": "[ED]",
+      "replace": "<span class='diamond' style='background: #2850AD; color: white'><span>E</span></span>"
+    },
+    {
+      "token": "[FD]",
+      "replace": "<span class='diamond' style='background: #FF6319; color: white'><span>F</span></span>"
+    },
+    {
+      "token": "[GD]",
+      "replace": "<span class='diamond' style='background: #6CBE45; color: white'><span>G</span></span>"
+    },
+    {
+      "token": "[JD]",
+      "replace": "<span class='diamond' style='background: #996633; color: white'><span>J</span></span>"
+    },
+    {
+      "token": "[LD]",
+      "replace": "<span class='diamond' style='background: #A7A9AC; color: white'><span>L</span></span>"
+    },
+    {
+      "token": "[MD]",
+      "replace": "<span class='diamond' style='background: #FF6319; color: white'><span>M</span></span>"
+    },
+    {
+      "token": "[ND]",
+      "replace": "<span class='diamond' style='background: #FCCC0A; color: black'><span>N</span></span>"
+    },
+    {
+      "token": "[QD]",
+      "replace": "<span class='diamond' style='background: #FCCC0A; color: black'><span>Q</span></span>"
+    },
+    {
+      "token": "[RD]",
+      "replace": "<span class='diamond' style='background: #FCCC0A; color: black'><span>R</span></span>"
+    },
+    {
+      "token": "[SD]",
+      "replace": "<span class='diamond' style='background: #808183; color: white'><span>S</span></span>"
+    },
+    {
+      "token": "[WD]",
+      "replace": "<span class='diamond' style='background: #FCCC0A; color: black'><span>W</span></span>"
+    },
+    {
+      "token": "[ZD]",
+      "replace": "<span class='diamond' style='background: #996633; color: white'><span>Z</span></span>"
+    },
+    {
+      "token": "[SIRD]",
+      "replace": "<span class='diamond' style='background: #2850AD; color: white'><span style='font-size: 60%'>SI</span></span>"
+    },
+    {
+      "token": "[FF]",
+      "replace": "<img src='data:image/png;base64,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' />"
+    },
+    {
+      "token": "[TP]",
+      "replace": "<a href='http://tripplanner.mta.info' target='_blank'><img src='data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAHgAA/+4ADkFkb2JlAGTAAAAAAf/bAIQAEAsLCwwLEAwMEBcPDQ8XGxQQEBQbHxcXFxcXHx4XGhoaGhceHiMlJyUjHi8vMzMvL0BAQEBAQEBAQEBAQEBAQAERDw8RExEVEhIVFBEUERQaFBYWFBomGhocGhomMCMeHh4eIzArLicnJy4rNTUwMDU1QEA/QEBAQEBAQEBAQEBA/8AAEQgAGABvAwEiAAIRAQMRAf/EAIUAAAIDAQEAAAAAAAAAAAAAAAAFAwQGAgEBAAMBAAAAAAAAAAAAAAAAAAABAgMQAAIBAwMCBAQGAwAAAAAAAAECAwARBCESBTETQVGBImFxkTJCUkMUFQaCIyQRAAEDAgMGBgMAAAAAAAAAABEAAQJBEiExE/BRgaEiQmFxwdHhA2KCI//aAAwDAQACEQMRAD8A2mVyeDhOI8qYRsw3KCCdOngDRi8pgZkhixphI4G4gAjQEC+o+NR8zFG3G5TsgLLE21iASNPA0mdpYeH4tsRuxNNIqGRRqQ1/u8xetYwjKLZl3t8FnKTs9ACtCczHGUuGX/6GTuKlj9tyL3tbw86sVnWE+JyseMZ3m2YcjGRz7i26Q39KojI5CLioOWGdI8vc2dhmuhG5vaR4nSnokB8xxd0agJZaGbmuLglaGbICyIbMtm0PoKlHI4REJEqkZJ2wkXIY+WlZ9Dl/zHJDGxEyyWAYSMoCdbfd1vQuBNx/8RBMQZDks7AG4F9ml/SnpQwxxBzbcUr5bq+oWpNRPNt/Ax+QrKZmfmr3c2DIyHVJyqvcJj2/II7ndVyf95k53JouXLDFioHREa2uzcB8tKWiM3bYe6ep4Jw+Yw6I/wBKibkHH6cn0pQJ8zLHEx/uHiOSsgldTYnbpf52FQTZmbi42XAs7uYslYElY3cKwcnU+Ptqm+qmB+QjU89mKdnk5B+lL9K5flnRCwgmYgXsF60o7ufjrlxl5xGsBkQzsplVwV1G0k21pzwuLMMRMjIyHnfIRJAG6ICLgD0OtKUYxYuHQ0ndxiks3LSPzWLlnFlDRIyiEj3tcPqBb41osfPabBfLOPJGUDHssPedgvoPj4VzJxivyUGf3CDApXt20bcGHX/Kr9T9k4yaLRYCI+E4RkzuXqopoY54nhlG6OQFWFyLg/EVCeNwmihhMf8ArxmDwrub2svQ3vr60UVm11Ls6b1T21HFGRgwSyNkhL5PaaJHufta+lr26nypdxf9exYYIXy4g2VGSW9xK33Hbpe3S1FFXHVscEYeYx5KXsuYg4ppDhY0M8uREm2Wexla5O63TQmwonw8fIkilmTc8Db4jcja3nodfWiio6j3EclXSKBVG/r/ABLFi0Fw5JK73CgnxADaVZGBiK88gT3ZICzHcx3ADb56aeVFFU+rW/mk1lLVzHxmDGYCkdji7hB7mO3f93jr6143FYDrOrQgjJbdNctqw6Ea6dfCiij+h7+e/wB0dP4riHhOMhjljSHSYbZCWYsV/LuvcD5VciiSGJIYxtSNQiDU2VRYDWiilK/uu/ZEbe0cFJRRRUql/9k=' /></a>"
+    },
+    {
+      "token": "[SB]",
+      "replace": "&nbsp;<i class='material-icons'>directions_bus</i>&nbsp;"
+    },
+    {
+      "token": "[ad]",
+      "replace": "&nbsp;&nbsp;<i class='material-icons' style='color: #01469b'>accessible</i>&nbsp;&nbsp;"
+    }
+  ],
+  "eventStyles": [
+    {
+      "selector": "class='circle'",
+      "style": ".circle {display: inline-block; margin: 2px; width:20px; height:20px; border-radius:50%; line-height:22px; text-align:center; font-size: 80%;}"
+    },
+    {
+      "selector": "class='square'",
+      "style": ".square {display: inline-block; margin: 2px; width:20px; height:20px; border-radius:0%; line-height:22px; text-align:center; font-size: 80%;}"
+    },
+    {
+      "selector": "class='diamond'",
+      "style": ".diamond {position: relative; display: inline-block; margin: 5px; width:20px; height:20px; border-radius:0%; line-height:20px; text-align: center; transform: rotate(45deg);}\n.diamond > span {font-family: monospace; font-size: 110%; position: absolute; top: 5%; left: 30%; transform: rotate(-45deg);}"
+    },
+    {
+      "selector": "class='material-icons'",
+      "style": "@font-face {font-family: 'Material Icons'; font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/s/materialicons/v36/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');}\n.material-icons {font-family: 'Material Icons'; font-weight: normal; font-style: normal;}"
     }
   ]
 }

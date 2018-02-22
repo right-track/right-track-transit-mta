@@ -1,9 +1,11 @@
 'use strict';
 
 const http = require('http');
+const path = require('path');
 const parseXML = require('xml2js').parseString;
 const cleanHTML = require('htmlclean');
 const props = require('../agency.json');
+const propsDir = path.dirname(require.resolve('../agency.json'));
 
 const TF = require('right-track-transit/src/TransitFeed');
 const TransitFeed = TF.TransitFeed;
@@ -17,6 +19,14 @@ let CACHE = undefined;
 let CACHE_UPDATED = new Date(0);
 
 
+/**
+ * Load the MTA Transit Feed
+ * @param {function} callback Callback function
+ * @param {Error} callback.error Transit Feed Error. The Error's message will be a pipe (|) separated
+ * string in the format of: Error Code|Error Type|Error Message that will be parsed out by the Right
+ * Track API Server into a more specific error Response.
+ * @param {TransitFeed} [callback.feed] The built Transit Feed for the MTA
+ */
 function loadFeed(callback) {
 
   // Return Cached Feed
@@ -44,7 +54,7 @@ function loadFeed(callback) {
 
           // No Feed Returned
           else {
-            return callback("5004|Could Not Parse Transit Data|The MTA Status Feed did not return a valid response.  This may be temporary so try again later.");
+            _parseError();
           }
 
         });
@@ -52,19 +62,36 @@ function loadFeed(callback) {
 
       // No Feed Returned
       else {
-        return callback("5004|Could Not Parse Transit Data|The MTA Status Feed did not return a valid response.  This may be temporary so try again later.");
+        _parseError();
       }
 
     });
 
   }
 
+
+  /**
+   * Return a Parse Error Response
+   * @private
+   */
+  function _parseError() {
+    return callback(
+      new Error("5004|Could Not Parse Transit Data|The MTA Status Feed did not return a valid response.  This may be temporary so try again later.")
+    );
+  }
+
 }
 
 
+/**
+ * Parse the MTA Service Feed XML into a Transit Feed
+ * @param {string} xml MTA Service Feed XML
+ * @param {function} callback Callback function(feed)
+ * @private
+ */
 function _parse(xml, callback) {
   parseXML(xml, function(err, result) {
-    if ( err ) {
+    if ( err || !result || !result.service ) {
       return callback();
     }
 
@@ -104,19 +131,14 @@ function _parseDivisions(service) {
   for ( let i = 0; i < definitions.length; i++ ) {
     let definition = definitions[i];
 
-    // Get the Lines
-    let lines = service[definition.tag][0].line;
-
-    // Parse the Lines
-    let tl = _parseLines(lines);
-
-    // TODO: Set Division Icon
+    // Set Icon Path
+    let icon = path.normalize(propsDir + '/' + definition.icon);
 
     // Create the Division
-    let td = new TransitDivision(definition.code, definition.name);
+    let td = new TransitDivision(definition.code, definition.name, icon);
 
     // Set the Lines
-    td.lines = tl;
+    td.lines = _parseLines(service[definition.tag][0].line);
 
     // Add to list
     rtn.push(td);
@@ -129,6 +151,12 @@ function _parseDivisions(service) {
 }
 
 
+/**
+ * Parse a Division's Lines into separate TransitLines
+ * @param lines MTA Lines
+ * @returns {TransitLine[]}
+ * @private
+ */
 function _parseLines(lines) {
 
   // Lines to return
@@ -141,17 +169,37 @@ function _parseLines(lines) {
     let status = line.status[0];
     let text = line.text[0];
 
-    // Parse the text into Events
-    let events = _parseEvents(text);
+    // HOTFIX: Change NQR --> NQRW
+    if ( name === "NQR" ) {
+      name = "NQRW";
+    }
 
-    // TODO: Set Line colors
+    // Change GOOD SERVICE to Good Service
+    if  ( status === "GOOD SERVICE" ) {
+      status = "Good Service";
+    }
+
+    // Set Line Code
+    let code = name;
+    code = code.replace(/ - /g, "-");
+    code = code.replace(/ /g, "-");
+
+    // Set Line Colors
+    let backgroundColor = props.lines[0].backgroundColor;
+    let textColor = props.lines[0].textColor;
+    for ( let j = 0; j < props.lines.length; j++ ) {
+      if ( props.lines[j].name === name ) {
+        backgroundColor = props.lines[j].backgroundColor;
+        textColor = props.lines[j].textColor;
+      }
+    }
 
     // Create the Line
-    let tl = new TransitLine(name.replace(/\s/g, ""), name);
+    let tl = new TransitLine(code, name, backgroundColor, textColor);
 
     // Set the Status and Events
     tl.status = status;
-    tl.events = events;
+    tl.events = _parseEvents(text);
 
     // Add to list
     rtn.push(tl);
@@ -165,7 +213,7 @@ function _parseLines(lines) {
 
 
 /**
- * Parse the Line's Status Text into separate Events
+ * Parse the Line's Status Text into separate TransitEvents
  * @param {string} text Line Status Text
  * @returns {TransitEvent[]}
  * @private
@@ -173,7 +221,7 @@ function _parseLines(lines) {
 function _parseEvents(text) {
 
   // Clean the HTML
-  let clean = cleanHTML(text);
+  let clean = cleanHTML(text).toString();
 
   // Find the event split points
   let indices = [];
@@ -195,28 +243,22 @@ function _parseEvents(text) {
 
   // Split the events
   let split = [];
-  if ( indices.length > 1 ) {
-    for ( let i = 0; i < indices.length-1; i++ ) {
-      let start = indices[i].index;
-      let end = indices[i+1].index;
-      split.push({
-        status: indices[i].name,
-        details: clean.substring(start, end)
-      });
+  for ( let i = 0; i < indices.length; i++ ) {
+    let start = indices[i].index;
+    let end = clean.length;
+    if ( i < indices.length-1 ) {
+      end = indices[i+1].index;
     }
     split.push({
-      status: indices[indices.length - 1].name,
-      details: clean.substring(indices[indices.length - 1].index)
+      status: indices[i].name,
+      details: clean.substring(start, end)
     });
   }
-  else if ( indices.length === 1 ) {
-    split = [{
-      status: indices[0].name,
-      details: clean
-    }];
-  }
 
-  // TODO: Parse Details
+  // Parse the Details of each event
+  for ( let i = 0; i < split.length; i++ ) {
+    split[i].details = _parseDetails(split[i].details);
+  }
 
   // Create the Events
   let events = [];
@@ -249,6 +291,52 @@ function _parseEvents(text) {
 }
 
 
+/**
+ * Parse the Details Text
+ * @param {string} details Details Text
+ * @returns {string}
+ * @private
+ */
+function _parseDetails(details) {
+
+  // Remove Redundant Header
+  details = details.replace(/<span class=["']Title[A-Za-z]*["']>.*<\/span>/g, "");
+
+  // Remove all display:none
+  details = details.replace(/display: ?none/g, "display:block");
+
+  // Replace Event Tokens
+  for ( let i = 0; i < props.eventTokens.length; i++ ) {
+    if ( details.indexOf(props.eventTokens[i].token) > -1 ) {
+      let replace = props.eventTokens[i].token.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      let regex = new RegExp(replace, 'g');
+      details = details.replace(regex, props.eventTokens[i].replace);
+    }
+  }
+
+  // Add Event Styles
+  let style = "";
+  for ( let i = 0; i < props.eventStyles.length; i++ ) {
+    if ( details.indexOf(props.eventStyles[i].selector) > -1 ) {
+      style += props.eventStyles[i].style;
+    }
+  }
+  if ( style !== "" ) {
+    style = "<style>" + style + "</style>";
+  }
+  details = style + details;
+
+  // Return the parsed details
+  return details;
+
+}
+
+
+/**
+ * Download the MTA Status Feed
+ * @param callback Callback function(body)
+ * @private
+ */
 function _download(callback) {
 
   // Make the get request
