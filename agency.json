@@ -516,21 +516,21 @@
     },
     {
       "token": "[SB]",
-      "replace": "&nbsp;<i class='material-icons'>directions_bus</i>&nbsp;"
+      "replace": "<i class='material-icons'>directions_bus</i>"
     },
     {
       "token": "[ad]",
-      "replace": "&nbsp;&nbsp;<i class='material-icons' style='color: #01469b'>accessible</i>&nbsp;&nbsp;"
+      "replace": "&nbsp;<i class='material-icons' style='color: #01469b'>accessible</i>&nbsp;"
     }
   ],
   "eventStyles": [
     {
       "selector": "class='circle'",
-      "style": ".circle {display: inline-block; margin: 2px; width:20px; height:20px; border-radius:50%; line-height:22px; text-align:center; font-size: 80%;}"
+      "style": ".circle {display: inline-block; margin: 2px; width:20px; height:20px; border-radius:50%; line-height:22px; text-align:center; font-size: 90%;}"
     },
     {
       "selector": "class='square'",
-      "style": ".square {display: inline-block; margin: 2px; width:20px; height:20px; border-radius:0%; line-height:22px; text-align:center; font-size: 80%;}"
+      "style": ".square {display: inline-block; margin: 2px; width:20px; height:20px; border-radius:0%; line-height:22px; text-align:center; font-size: 90%;}"
     },
     {
       "selector": "class='diamond'",
