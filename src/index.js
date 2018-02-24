@@ -78,10 +78,10 @@ class MTA extends RightTrackTransitAgency {
   getLineTextColor(line) {
     for ( let j = 0; j < props.lines.length; j++ ) {
       if ( props.lines[j].code === line ) {
-        return props.lines[j].backgroundColor;
+        return props.lines[j].textColor;
       }
     }
-    return props.lines[0].backgroundColor;
+    return props.lines[0].textColor;
   }
 
 }
