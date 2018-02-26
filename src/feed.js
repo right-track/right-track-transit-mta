@@ -304,8 +304,11 @@ function _parseDetails(details) {
   // Remove all display:none
   details = details.replace(/display: ?none/g, "display:block");
 
+  // Remove leading breaks
+  details = details.replace(/^(<br ?(\/)?>\s*)+/g, "");
+
   // Remove trailing breaks
-  details = details.replace(/(<br(\/)?>\s*)+$/g, "");
+  details = details.replace(/(<br ?(\/)?>\s*)+$/g, "");
 
   // Replace Event Tokens
   for ( let i = 0; i < props.eventTokens.length; i++ ) {
