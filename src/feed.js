@@ -299,7 +299,7 @@ function _parseEvents(text) {
 function _parseDetails(details) {
 
   // Remove Redundant Header
-  details = details.replace(/<span class=["']Title[A-Za-z]*["']>.*<\/span>/g, "");
+  details = details.replace(/<span class=["']Title[A-Za-z]*["']>[^<]*<\/span>/g, "");
 
   // Remove all display:none
   details = details.replace(/display: ?none/g, "display:block");
