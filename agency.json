@@ -41,47 +41,47 @@
     {
       "code": "default",
       "backgroundColor": "#3d3d3d",
-      "textColor": "#e7e7e7"
+      "textColor": "#ffffff"
     },
     {
       "code": "123",
       "backgroundColor": "#EE352E",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "456",
       "backgroundColor": "#00933C",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "7",
       "backgroundColor": "#B933AD",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "ACE",
       "backgroundColor": "#2850AD",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "BDFM",
       "backgroundColor": "#FF6319",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "G",
       "backgroundColor": "#6CBE45",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "JZ",
       "backgroundColor": "#996633",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "L",
       "backgroundColor": "#A7A9AC",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "NQRW",
@@ -91,112 +91,112 @@
     {
       "code": "S",
       "backgroundColor": "#808183",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "SIR",
       "backgroundColor": "#2850AD",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Babylon",
       "backgroundColor": "#00985F",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "City-Terminal-Zone",
       "backgroundColor": "#4D5357",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Far-Rockaway",
       "backgroundColor": "#6E3219",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Hempstead",
       "backgroundColor": "#CE8E00",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Long-Beach",
       "backgroundColor": "#FF6319",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Montauk",
       "backgroundColor": "#006983",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Oyster-Bay",
       "backgroundColor": "#00AF3F",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Port-Jefferson",
       "backgroundColor": "#0039A6",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Port-Washington",
       "backgroundColor": "#C60C30",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Ronkonkoma",
       "backgroundColor": "#A626AA",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "West-Hempstead",
       "backgroundColor": "#00A1DE",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Hudson",
       "backgroundColor": "#009B3A",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Harlem",
       "backgroundColor": "#0039A6",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Wassaic",
       "backgroundColor": "#0039A6",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "New-Haven",
       "backgroundColor": "#EE0034",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "New-Canaan",
       "backgroundColor": "#EE0034",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Danbury",
       "backgroundColor": "#EE0034",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Waterbury",
       "backgroundColor": "#EE0034",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Pascack-Valley",
       "backgroundColor": "#8E258D",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     },
     {
       "code": "Port-Jervis",
       "backgroundColor": "#FF7900",
-      "textColor": "#E7E7E7"
+      "textColor": "#FFFFFF"
     }
   ],
   "eventDelimiters": [
@@ -312,7 +312,7 @@
     },
     {
       "token": "[SIR]",
-      "replace": "<span class='circle' style='background: #2850AD; color: white'><span style='font-size: 60%;'>SIR</span></span>"
+      "replace": "<span class='circle' style='background: #2850AD; color: white'><span style='font-size: 60%;'>SI</span></span>"
     },
     {
       "token": "[1S]",
@@ -408,7 +408,7 @@
     },
     {
       "token": "[SIRS]",
-      "replace": "<span class='square' style='background: #2850AD; color: white'><span style='font-size: 60%;'>SIR</span></span>"
+      "replace": "<span class='square' style='background: #2850AD; color: white'><span style='font-size: 60%;'>SI</span></span>"
     },
     {
       "token": "[1D]",
