@@ -3,6 +3,11 @@
   "name": "MTA",
   "description": "The Metropolitan Transportation Authority operates public transit in the greater New York City region.  This feed includes the NYC Transit Subway, NYCT and MTA Buses, Long Island Rail Road, Metro-North Railroad, and MTA-operated (NY intrastate) bridges and tunnels.",
   "icon": "./img/mta.png",
+  "maintainer": {
+    "name": "David Waring",
+    "email": "dev@davidwaring.net",
+    "source": "https://github.com/right-track/right-track-transit-mta"
+  },
   "url": "http://web.mta.info/status/serviceStatus.txt",
   "maxCache": 300,
   "divisions": [

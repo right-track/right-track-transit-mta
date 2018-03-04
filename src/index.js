@@ -26,7 +26,8 @@ class MTA extends RightTrackTransitAgency {
       props.id,
       props.name,
       props.description,
-      path.normalize(propsDir + '/' + props.icon)
+      path.normalize(propsDir + '/' + props.icon),
+      props.maintainer
     );
   }
 
