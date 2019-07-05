@@ -206,20 +206,52 @@
   ],
   "eventDelimiters": [
     {
-      "delim": "TitlePlannedWork",
-      "name": "Planned Work"
+      "delim": "TitleSuspended",
+      "name": "Suspended"
     },
     {
-      "delim": "TitleServiceChange",
-      "name": "Service Change"
+      "delim": "TitleMultipleImpacts",
+      "name": "Multiple Impacts"
+    },
+    {
+      "delim": "TitlePartSuspended",
+      "name": "Part Suspended"
+    },
+    {
+      "delim": "TitleTrainsRerouted",
+      "name": "Trains Rerouted"
     },
     {
       "delim": "TitleDelay",
       "name": "Delays"
     },
     {
-      "delim": "TitleSuspended",
-      "name": "Suspended"
+      "delim": "TitleServiceChange",
+      "name": "Service Change"
+    },
+    {
+      "delim": "TitleLocaltoExpress",
+      "name": "Local to Express"
+    },
+    {
+      "delim": "TitleExpresstoLocal",
+      "name": "Express to Local"
+    },
+    {
+      "delim": "TitleStationsSkipped",
+      "name": "Stations Skipped"
+    },
+    {
+      "delim": "TitleSomeDelay",
+      "name": "Some Delays"
+    },
+    {
+      "delim": "TitleSlowSpeeds",
+      "name": "Slow Speeds"
+    },
+    {
+      "delim": "TitlePlannedWork",
+      "name": "Planned Work"
     }
   ],
   "eventTokens": [
