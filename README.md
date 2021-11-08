@@ -24,6 +24,9 @@ This example builds a `TransitFeed` for the MTA:
 ```javascript
 const mta = require('right-track-transit-mta');
 
+// Optional: Override default agency properties
+mta.readConfig('/path/to/agency_local.json');
+
 mta.loadFeed(function(err, feed) {
   if ( !err ) {
     console.log(JSON.stringify(feed, null, 2));
