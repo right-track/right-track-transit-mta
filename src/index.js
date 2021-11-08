@@ -22,13 +22,7 @@ class MTA extends RightTrackTransitAgency {
    * Create a `RightTrackTransitAgency` for the MTA
    */
   constructor() {
-    super(
-      props.id,
-      props.name,
-      props.description,
-      path.normalize(propsDir + '/' + props.icon),
-      props.maintainer
-    );
+    super(propsDir);
   }
 
   /**
