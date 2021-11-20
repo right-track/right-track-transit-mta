@@ -8,250 +8,412 @@
     "email": "dev@davidwaring.net",
     "source": "https://github.com/right-track/right-track-transit-mta"
   },
-  "url": "http://web.mta.info/status/serviceStatus.txt",
+  "url": "https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fall-alerts.json",
+  "apiKey": "MTA API KEY",
   "maxCache": 300,
   "divisions": [
     {
-      "tag": "subway",
+      "mta_agency_ids": ["MTASBWY"],
       "code": "subway",
       "name": "Subway",
-      "icon": "./img/subway.png"
+      "icon": "./img/subway.png",
+      "lines": [
+        {
+          "mta_route_id": "1",
+          "code": "1",
+          "name": "1",
+          "backgroundColor": "#EE352E",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "2",
+          "code": "2",
+          "name": "2",
+          "backgroundColor": "#EE352E",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "3",
+          "code": "3",
+          "name": "3",
+          "backgroundColor": "#EE352E",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "4",
+          "code": "4",
+          "name": "4",
+          "backgroundColor": "#00933C",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "5",
+          "code": "5",
+          "name": "5",
+          "backgroundColor": "#00933C",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "6",
+          "code": "6",
+          "name": "6",
+          "backgroundColor": "#00933C",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "7",
+          "code": "7",
+          "name": "7",
+          "backgroundColor": "#B933AD",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "A",
+          "code": "A",
+          "name": "A",
+          "backgroundColor": "#2850AD",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "C",
+          "code": "C",
+          "name": "C",
+          "backgroundColor": "#2850AD",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "E",
+          "code": "E",
+          "name": "E",
+          "backgroundColor": "#2850AD",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "B",
+          "code": "B",
+          "name": "B",
+          "backgroundColor": "#FF6319",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "D",
+          "code": "D",
+          "name": "D",
+          "backgroundColor": "#FF6319",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "F",
+          "code": "F",
+          "name": "F",
+          "backgroundColor": "#FF6319",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "M",
+          "code": "M",
+          "name": "M",
+          "backgroundColor": "#FF6319",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "G",
+          "code": "G",
+          "name": "G",
+          "backgroundColor": "#6CBE45",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "J",
+          "code": "J",
+          "name": "J",
+          "backgroundColor": "#996633",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "Z",
+          "code": "Z",
+          "name": "Z",
+          "backgroundColor": "#996633",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "L",
+          "code": "L",
+          "name": "L",
+          "backgroundColor": "#A7A9AC",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "N",
+          "code": "N",
+          "name": "N",
+          "backgroundColor": "#FCCC0A",
+          "textColor": "#343434"
+        },
+        {
+          "mta_route_id": "Q",
+          "code": "Q",
+          "name": "Q",
+          "backgroundColor": "#FCCC0A",
+          "textColor": "#343434"
+        },
+        {
+          "mta_route_id": "R",
+          "code": "R",
+          "name": "R",
+          "backgroundColor": "#FCCC0A",
+          "textColor": "#343434"
+        },
+        {
+          "mta_route_id": "W",
+          "code": "W",
+          "name": "W",
+          "backgroundColor": "#FCCC0A",
+          "textColor": "#343434"
+        },
+        {
+          "mta_route_id": "GS",
+          "code": "GS",
+          "name": "42nd St Shuttle",
+          "backgroundColor": "#808183",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "FS",
+          "code": "FS",
+          "name": "Franklin Ave Shuttle",
+          "backgroundColor": "#808183",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "H",
+          "code": "H",
+          "name": "Rockaway Park Shuttle",
+          "backgroundColor": "#808183",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "SI",
+          "code": "SI",
+          "name": "Staten Island Railway",
+          "backgroundColor": "#2850AD",
+          "textColor": "#FFFFFF"
+        }
+      ]
     },
     {
-      "tag": "bus",
+      "mta_agency_ids": ["MTA NYCT", "MTABC"],
       "code": "bus",
-      "name": "NYC Buses",
-      "icon": "./img/bus.png"
+      "name": "Bus",
+      "icon": "./img/bus.png",
+      "lines": [
+        {
+          "mta_route_id_matches": ["^M[0-9]+.*"],
+          "code": "manhattan",
+          "name": "Manhattan",
+          "backgroundColor": "#3D3D3D",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id_matches": ["^B[0-9]+.*"],
+          "code": "brooklyn",
+          "name": "Brooklyn",
+          "backgroundColor": "#3D3D3D",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id_matches": ["^Q[0-9]+.*"],
+          "code": "queens",
+          "name": "Queens",
+          "backgroundColor": "#3D3D3D",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id_matches": ["^BX[0-9]+.*"],
+          "code": "bronx",
+          "name": "Bronx",
+          "backgroundColor": "#3D3D3D",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id_matches": ["^S[0-9]+.*"],
+          "code": "si",
+          "name": "Staten Island",
+          "backgroundColor": "#3D3D3D",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id_matches": ["^X[0-9]+.*", "^BM[0-9]+.*", "^QM[0-9]+.*", "^BXM[0-9]+.*", "^SIM[0-9]+.*"],
+          "code": "express",
+          "name": "Express",
+          "backgroundColor": "#3D3D3D",
+          "textColor": "#FFFFFF"
+        }
+      ]
     },
     {
-      "tag": "LIRR",
       "code": "lirr",
       "name": "Long Island Rail Road",
-      "icon": "./img/lirr.png"
+      "icon": "./img/lirr.png",
+      "mta_agency_ids": ["LI"],
+      "lines": [
+        {
+          "mta_route_id": "12",
+          "code": "city-zone",
+          "name": "City Terminal Zone",
+          "backgroundColor": "#4D5357",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "1",
+          "code": "babylon",
+          "name": "Babylon",
+          "backgroundColor": "#00985F",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "7",
+          "code": "far-rockaway",
+          "name": "Far Rockaway",
+          "backgroundColor": "#6E3219",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "2",
+          "code": "hempstead",
+          "name": "Hempstead",
+          "backgroundColor": "#CE8E00",
+          "textColor": "#121212"
+        },
+        {
+          "mta_route_id": "6",
+          "code": "long-beach",
+          "name": "Long Beach",
+          "backgroundColor": "#FF6319",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "5",
+          "code": "montauk",
+          "name": "Montauk",
+          "backgroundColor": "#00B2A9",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "3",
+          "code": "oyster-bay",
+          "name": "Oyster Bay",
+          "backgroundColor": "#00AF3F",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "10",
+          "code": "port-jefferson",
+          "name": "Port Jefferson",
+          "backgroundColor": "#006EC7",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "9",
+          "code": "port-washington",
+          "name": "Port Washington",
+          "backgroundColor": "#C60C30",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "4",
+          "code": "ronkonkoma",
+          "name": "Ronkonkoma",
+          "backgroundColor": "#A626AA",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "8",
+          "code": "west-hempstead",
+          "name": "West Hempstead",
+          "backgroundColor": "#00A1DE",
+          "textColor": "#121212"
+        },
+        {
+          "mta_route_id": "11",
+          "code": "belmont",
+          "name": "Belmont Park",
+          "backgroundColor": "#60269E",
+          "textColor": "#FFFFFF"
+        }
+      ]
     },
     {
-      "tag": "MetroNorth",
       "code": "mnr",
       "name": "Metro-North Railroad",
-      "icon": "./img/mnr.png"
-    },
-    {
-      "tag": "BT",
-      "code": "roads",
-      "name": "Bridges & Tunnels",
-      "icon": "./img/roads.png"
-    }
-  ],
-  "lines": [
-    {
-      "code": "default",
-      "backgroundColor": "#3d3d3d",
-      "textColor": "#ffffff"
-    },
-    {
-      "code": "123",
-      "backgroundColor": "#EE352E",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "456",
-      "backgroundColor": "#00933C",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "7",
-      "backgroundColor": "#B933AD",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "ACE",
-      "backgroundColor": "#2850AD",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "BDFM",
-      "backgroundColor": "#FF6319",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "G",
-      "backgroundColor": "#6CBE45",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "JZ",
-      "backgroundColor": "#996633",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "L",
-      "backgroundColor": "#A7A9AC",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "NQRW",
-      "backgroundColor": "#FCCC0A",
-      "textColor": "#343434"
-    },
-    {
-      "code": "S",
-      "backgroundColor": "#808183",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "SIR",
-      "backgroundColor": "#2850AD",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Babylon",
-      "backgroundColor": "#00985F",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "City-Terminal-Zone",
-      "backgroundColor": "#4D5357",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Far-Rockaway",
-      "backgroundColor": "#6E3219",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Hempstead",
-      "backgroundColor": "#CE8E00",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Long-Beach",
-      "backgroundColor": "#FF6319",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Montauk",
-      "backgroundColor": "#006983",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Oyster-Bay",
-      "backgroundColor": "#00AF3F",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Port-Jefferson",
-      "backgroundColor": "#0039A6",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Port-Washington",
-      "backgroundColor": "#C60C30",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Ronkonkoma",
-      "backgroundColor": "#A626AA",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "West-Hempstead",
-      "backgroundColor": "#00A1DE",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Hudson",
-      "backgroundColor": "#009B3A",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Harlem",
-      "backgroundColor": "#0039A6",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Wassaic",
-      "backgroundColor": "#0039A6",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "New-Haven",
-      "backgroundColor": "#EE0034",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "New-Canaan",
-      "backgroundColor": "#EE0034",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Danbury",
-      "backgroundColor": "#EE0034",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Waterbury",
-      "backgroundColor": "#EE0034",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Pascack-Valley",
-      "backgroundColor": "#8E258D",
-      "textColor": "#FFFFFF"
-    },
-    {
-      "code": "Port-Jervis",
-      "backgroundColor": "#FF7900",
-      "textColor": "#FFFFFF"
-    }
-  ],
-  "eventDelimiters": [
-    {
-      "delim": "TitleSuspended",
-      "name": "Suspended"
-    },
-    {
-      "delim": "TitleMultipleImpacts",
-      "name": "Multiple Impacts"
-    },
-    {
-      "delim": "TitlePartSuspended",
-      "name": "Part Suspended"
-    },
-    {
-      "delim": "TitleTrainsRerouted",
-      "name": "Trains Rerouted"
-    },
-    {
-      "delim": "TitleDelay",
-      "name": "Delays"
-    },
-    {
-      "delim": "TitleServiceChange",
-      "name": "Service Change"
-    },
-    {
-      "delim": "TitleLocaltoExpress",
-      "name": "Local to Express"
-    },
-    {
-      "delim": "TitleExpresstoLocal",
-      "name": "Express to Local"
-    },
-    {
-      "delim": "TitleStationsSkipped",
-      "name": "Stations Skipped"
-    },
-    {
-      "delim": "TitleSomeDelay",
-      "name": "Some Delays"
-    },
-    {
-      "delim": "TitleSlowSpeeds",
-      "name": "Slow Speeds"
-    },
-    {
-      "delim": "TitlePlannedWork",
-      "name": "Planned Work"
+      "icon": "./img/mnr.png",
+      "mta_agency_ids": ["MNR"],
+      "lines": [
+        {
+          "mta_route_id": "1",
+          "code": "hudson",
+          "name": "Hudson Line",
+          "backgroundColor": "#009B3A",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "2",
+          "code": "harlem",
+          "name": "Harlem Line",
+          "backgroundColor": "#0039A6",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "Wassaic",
+          "code": "wassaic",
+          "name": "Wassaic Branch",
+          "backgroundColor": "#0039A6",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "3",
+          "code": "new-haven",
+          "name": "New Haven Line",
+          "backgroundColor": "#EE0034",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "4",
+          "code": "new-canaan",
+          "name": "New Canaan Branch",
+          "backgroundColor": "#EE0034",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "5",
+          "code": "danbury",
+          "name": "Danbury Branch",
+          "backgroundColor": "#EE0034",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "6",
+          "code": "waterbury",
+          "name": "Waterbury Branch",
+          "backgroundColor": "#EE0034",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "50",
+          "code": "pascack-valley",
+          "name": "Pascack Valley Line (NJT)",
+          "backgroundColor": "#8E258D",
+          "textColor": "#FFFFFF"
+        },
+        {
+          "mta_route_id": "51",
+          "code": "port-jervis",
+          "name": "Port Jervis Line (NJT)",
+          "backgroundColor": "#FF7900",
+          "textColor": "#FFFFFF"
+        }
+      ]
     }
   ],
   "eventTokens": [
@@ -552,11 +714,11 @@
       "replace": "<a href='http://tripplanner.mta.info' target='_blank'><img src='data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAHgAA/+4ADkFkb2JlAGTAAAAAAf/bAIQAEAsLCwwLEAwMEBcPDQ8XGxQQEBQbHxcXFxcXHx4XGhoaGhceHiMlJyUjHi8vMzMvL0BAQEBAQEBAQEBAQEBAQAERDw8RExEVEhIVFBEUERQaFBYWFBomGhocGhomMCMeHh4eIzArLicnJy4rNTUwMDU1QEA/QEBAQEBAQEBAQEBA/8AAEQgAGABvAwEiAAIRAQMRAf/EAIUAAAIDAQEAAAAAAAAAAAAAAAAFAwQGAgEBAAMBAAAAAAAAAAAAAAAAAAABAgMQAAIBAwMCBAQGAwAAAAAAAAECAwARBCESBTETQVGBImFxkTJCUkMUFQaCIyQRAAEDAgMGBgMAAAAAAAAAABEAAQJBEiExE/BRgaEiQmFxwdHhA2KCI//aAAwDAQACEQMRAD8A2mVyeDhOI8qYRsw3KCCdOngDRi8pgZkhixphI4G4gAjQEC+o+NR8zFG3G5TsgLLE21iASNPA0mdpYeH4tsRuxNNIqGRRqQ1/u8xetYwjKLZl3t8FnKTs9ACtCczHGUuGX/6GTuKlj9tyL3tbw86sVnWE+JyseMZ3m2YcjGRz7i26Q39KojI5CLioOWGdI8vc2dhmuhG5vaR4nSnokB8xxd0agJZaGbmuLglaGbICyIbMtm0PoKlHI4REJEqkZJ2wkXIY+WlZ9Dl/zHJDGxEyyWAYSMoCdbfd1vQuBNx/8RBMQZDks7AG4F9ml/SnpQwxxBzbcUr5bq+oWpNRPNt/Ax+QrKZmfmr3c2DIyHVJyqvcJj2/II7ndVyf95k53JouXLDFioHREa2uzcB8tKWiM3bYe6ep4Jw+Yw6I/wBKibkHH6cn0pQJ8zLHEx/uHiOSsgldTYnbpf52FQTZmbi42XAs7uYslYElY3cKwcnU+Ptqm+qmB+QjU89mKdnk5B+lL9K5flnRCwgmYgXsF60o7ufjrlxl5xGsBkQzsplVwV1G0k21pzwuLMMRMjIyHnfIRJAG6ICLgD0OtKUYxYuHQ0ndxiks3LSPzWLlnFlDRIyiEj3tcPqBb41osfPabBfLOPJGUDHssPedgvoPj4VzJxivyUGf3CDApXt20bcGHX/Kr9T9k4yaLRYCI+E4RkzuXqopoY54nhlG6OQFWFyLg/EVCeNwmihhMf8ArxmDwrub2svQ3vr60UVm11Ls6b1T21HFGRgwSyNkhL5PaaJHufta+lr26nypdxf9exYYIXy4g2VGSW9xK33Hbpe3S1FFXHVscEYeYx5KXsuYg4ppDhY0M8uREm2Wexla5O63TQmwonw8fIkilmTc8Db4jcja3nodfWiio6j3EclXSKBVG/r/ABLFi0Fw5JK73CgnxADaVZGBiK88gT3ZICzHcx3ADb56aeVFFU+rW/mk1lLVzHxmDGYCkdji7hB7mO3f93jr6143FYDrOrQgjJbdNctqw6Ea6dfCiij+h7+e/wB0dP4riHhOMhjljSHSYbZCWYsV/LuvcD5VciiSGJIYxtSNQiDU2VRYDWiilK/uu/ZEbe0cFJRRRUql/9k=' /></a>"
     },
     {
-      "token": "[SB]",
+      "token": "[shuttle bus icon]",
       "replace": "<i class='material-icons'>directions_bus</i>"
     },
     {
-      "token": "[ad]",
+      "token": "[accessibility icon]",
       "replace": "&nbsp;<i class='material-icons' style='color: #01469b'>accessible</i>&nbsp;"
     }
   ],
