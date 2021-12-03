@@ -511,103 +511,27 @@
     },
     {
       "token": "[SIR]",
-      "replace": "<span class='circle' style='background: #2850AD; color: white'><span style='font-size: 60%;'>SI</span></span>"
-    },
-    {
-      "token": "[1S]",
-      "replace": "<span class='square' style='background: #EE352E; color: white'>1</span>"
-    },
-    {
-      "token": "[2S]",
-      "replace": "<span class='square' style='background: #EE352E; color: white'>2</span>"
-    },
-    {
-      "token": "[3S]",
-      "replace": "<span class='square' style='background: #EE352E; color: white'>3</span>"
-    },
-    {
-      "token": "[4S]",
-      "replace": "<span class='square' style='background: #EE352E; color: white'>3</span>"
-    },
-    {
-      "token": "[5S]",
-      "replace": "<span class='square' style='background: #00933C; color: white'>5</span>"
-    },
-    {
-      "token": "[6S]",
-      "replace": "<span class='square' style='background: #00933C; color: white'>6</span>"
-    },
-    {
-      "token": "[7S]",
-      "replace": "<span class='square' style='background: #B933AD; color: white'>7</span>"
-    },
-    {
-      "token": "[AS]",
-      "replace": "<span class='square' style='background: #2850AD; color: white'>A</span>"
-    },
-    {
-      "token": "[BS]",
-      "replace": "<span class='square' style='background: #FF6319; color: white'>B</span>"
-    },
-    {
-      "token": "[CS]",
-      "replace": "<span class='square' style='background: #2850AD; color: white'>C</span>"
-    },
-    {
-      "token": "[DS]",
-      "replace": "<span class='square' style='background: #FF6319; color: white'>D</span>"
-    },
-    {
-      "token": "[ES]",
-      "replace": "<span class='square' style='background: #2850AD; color: white'>E</span>"
+      "replace": "<span class='circle' style='background: #2850AD; color: white'><span style='font-size: 80%;'>SI</span></span>"
     },
     {
       "token": "[FS]",
-      "replace": "<span class='square' style='background: #FF6319; color: white'>F</span>"
+      "replace": "<span class='circle' style='background: #808183; color: white'>S</span>"
     },
     {
       "token": "[GS]",
-      "replace": "<span class='square' style='background: #6CBE45; color: white'>G</span>"
+      "replace": "<span class='circle' style='background: #808183; color: white'>S</span>"
     },
     {
-      "token": "[JS]",
-      "replace": "<span class='square' style='background: #996633; color: white'>J</span>"
+      "token": "[H]",
+      "replace": "<span class='circle' style='background: #808183; color: white'>S</span>"
     },
     {
-      "token": "[LS]",
-      "replace": "<span class='square' style='background: #A7A9AC; color: white'>L</span>"
-    },
-    {
-      "token": "[MS]",
-      "replace": "<span class='square' style='background: #FF6319; color: white'>M</span>"
-    },
-    {
-      "token": "[NS]",
-      "replace": "<span class='square' style='background: #FCCC0A; color: black'>N</span>"
-    },
-    {
-      "token": "[QS]",
-      "replace": "<span class='square' style='background: #FCCC0A; color: black'>Q</span>"
+      "token": "[HS]",
+      "replace": "<span class='circle' style='background: #808183; color: white'>S</span>"
     },
     {
       "token": "[RS]",
-      "replace": "<span class='square' style='background: #FCCC0A; color: black'>R</span>"
-    },
-    {
-      "token": "[SS]",
-      "replace": "<span class='square' style='background: #808183; color: white'>S</span>"
-    },
-    {
-      "token": "[WS]",
-      "replace": "<span class='square' style='background: #FCCC0A; color: black'>W</span>"
-    },
-    {
-      "token": "[ZS]",
-      "replace": "<span class='square' style='background: #996633; color: white'>Z</span>"
-    },
-    {
-      "token": "[SIRS]",
-      "replace": "<span class='square' style='background: #2850AD; color: white'><span style='font-size: 60%;'>SI</span></span>"
+      "replace": "<span class='circle' style='background: #808183; color: white'>S</span>"
     },
     {
       "token": "[1D]",
