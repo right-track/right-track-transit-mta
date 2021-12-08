@@ -1,7 +1,7 @@
 'use strict';
 
 const path = require('path');
-const RightTrackTransitAgency = require('right-track-transit');
+const RightTrackTransitAgency = require('right-track-core/modules/classes/RightTrackTransitAgency');
 const feed = require('./feed.js');
 
 const moduleDirectory = __dirname + "/../";
@@ -11,8 +11,8 @@ const moduleDirectory = __dirname + "/../";
  * **Metropolitan Transportation Authority (MTA)**.
  *
  * For more information, see:
- * - Right Track Transit Agency project ({@link https://github.com/right-track/right-track-transit})
- * - Right Track Transit Agency documentation ({@link https://docs.righttrack.io/right-track-transit})
+ * - Right Track core project ({@link https://github.com/right-track/right-track-core})
+ * - Right Track core documentation ({@link https://docs.righttrack.io/right-track-core})
  *
  * @class
  */

@@ -8,9 +8,6 @@
   "scripts": {
     "docs": "jsdoc -c jsdoc.json"
   },
-  "dependencies": {
-    "right-track-transit": "^1.3.0"
-  },
   "devDependencies": {
     "foodoc": "^0.0.9",
     "jsdoc": "^3.6.3"
@@ -23,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/right-track/right-track-transit-mta/issues",
     "email": "dev@davidwaring.net"
+  },
+  "dependencies": {
+    "right-track-core": "github:right-track/right-track-core"
   }
 }
