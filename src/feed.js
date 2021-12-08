@@ -2,7 +2,7 @@
 
 const https = require('https');
 
-const TF = require('right-track-transit/src/TransitFeed');
+const TF = require('right-track-core/modules/classes/RightTrackTransitAgency/TransitFeed');
 const TransitFeed = TF.TransitFeed;
 const TransitDivision = TF.TransitDivision;
 const TransitEvent = TF.TransitEvent;
