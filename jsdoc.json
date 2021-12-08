@@ -6,7 +6,18 @@
         "includePattern": ".+\\.js(doc|x)?$",
         "excludePattern": "(^|\\/|\\\\)_"
     },
+    "templates": {
+        "systemName": "Right Track Transit: MTA",
+        "systemSummary": "A Right Track Transit implementation for the Metropolitan Transportation Authority",
+        "systemColor": "#00897B",
+        "footer": "Source Code for Right Track available at <a href='https://github.com/right-track'>GitHub/right-track</a>",
+        "copyright": "Copyright &copy; 2021 David Waring and Right Track Contributors",
+        "dateFormat": "YYYY-MM-DD",
+        "collapseSymbols": false
+      },
     "opts": {
+        "readme": "README.md",
+        "template": "./node_modules/foodoc/template",
         "destination": "doc/",
         "recurse": true
     }
