@@ -1,10 +1,9 @@
-<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>index.js</title>
+		<title>Classes</title>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -42,7 +41,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"YYYY-MM-DD","systemName":"Right Track Transit: MTA","systemSummary":"A Right Track Transit implementation for the Metropolitan Transportation Authority","systemLogo":"","systemColor":"#00897B","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"Source Code for Right Track available at <a href='https://github.com/right-track'>GitHub/right-track</a>","copyright":"Copyright &copy; 2021 David Waring and Right Track Contributors","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -97,60 +96,36 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">source</span>
-				<h1><span class="name">index.js</span></h1>
-			</div>
+				<span class="kind">list</span>
+				<h1><span class="name">Classes</span></h1>
+				<div class="summary"><p>All documented classes.</p></div>			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-12 main-content">
-		<section class="source-section">
-			<article></article>
-			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">'use strict';
-
-const path = require('path');
-const RightTrackTransitAgency = require('right-track-transit');
-const feed = require('./feed.js');
-
-const moduleDirectory = __dirname + "/../";
-
-/**
- * `RightTrackTransitAgency` implementation for the
- * **Metropolitan Transportation Authority (MTA)**.
- *
- * For more information, see:
- * - Right Track Transit Agency project ({@link https://github.com/right-track/right-track-transit})
- * - Right Track Transit Agency documentation ({@link https://docs.righttrack.io/right-track-transit})
- *
- * @class
- */
-class MTA extends RightTrackTransitAgency {
-
-  /**
-   * Create a `RightTrackTransitAgency` for the MTA
-   */
-  constructor() {
-    super(path.normalize(moduleDirectory));
-  }
-
-  /**
-   * Load the Transit Feed for the MTA
-   * @param {function} callback Callback function
-   * @param {Error} callback.error Transit Feed Error. The Error's message will be a pipe (|) separated
-   * string in the format of: Error Code|Error Type|Error Message that will be parsed out by the Right
-   * Track API Server into a more specific error Response.
-   * @param {TransitFeed} [callback.feed] The built Transit Feed for the MTA
-   */
-  loadFeed(callback) {
-    feed(this.config, callback);
-  }
-
-}
-
-
-module.exports = new MTA();</code></pre>
-		</section>
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li class="active">Classes</li>
+						</ol>
+					<section>
+		<h2><span class="name">Classes</span></h2>
+		<article class="secondary">
+				<dl class="symbol">
+						
+						<dt class="symbol-title class public">
+			<h4 id="MTA" class="class public"><a href="MTA.html"><span class="signature-new">new&nbsp;</span><span class="name">MTA</span><span class="signature-params">()</span><span class="signature-type"></span></a></h4>
+</dt>
+<dd class="symbol-details class public">
+	<div class="symbol-details-inner">
+	</div>
+</dd>
+				</dl>
+		</article>
+					</section>
 			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
 		</div>
 	</div>
 	<footer>
@@ -183,4 +158,3 @@ module.exports = new MTA();</code></pre>
 	
 </body>
 </html>
-<!-- end:source.tmpl.hbs -->

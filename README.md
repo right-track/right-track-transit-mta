@@ -1,12 +1,11 @@
 Metropolitan Transportation Authority
 =====================================
 
-**node module:** [right-track-transit-mta](https://www.npmjs.com/package/right-track-transit-mta)<br />
 **GitHub repo:** [right-track/right-track-transit-mta](https://github.com/right-track/right-track-transit-mta)
 
 ---
 
-This module is an implementation of a [Right Track Transit Agency](https://github.com/right-track/right-track-agency)
+This module is an implementation of a [_RightTrackTransitAgency_](https://github.com/right-track/right-track-core#right-track-transit-agency)
 used to create a real-time Transit Feed for the **MTA** in New York City, which is used in the various
 [Right Track Projects](https://github.com/right-track).
 
@@ -14,8 +13,8 @@ used to create a real-time Transit Feed for the **MTA** in New York City, which 
 ### Documentation
 
 Documentation about the `RightTrackTransitAgency` class and `TransitFeed` classes can be found in the
-[right-track-transit](https://github.com/right-track/right-track-transit) project
-and online at [https://docs.righttrack.io/right-track-transit](https://docs.righttrack.io/right-track-transit).
+[right-track-core](https://github.com/right-track/right-track-core) project
+and online at [https://docs.righttrack.io/right-track-core](https://docs.righttrack.io/right-track-core).
 
 ### Usage
 
