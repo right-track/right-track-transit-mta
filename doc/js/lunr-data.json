@@ -40,6 +40,7 @@
     "documentStore": {
       "store": {
         "index.html": [
+          "agenc",
           "author",
           "implement",
           "index",
@@ -62,9 +63,9 @@
           "list:class"
         ],
         "MTA.html": [
-          "agenc",
           "author",
           "class",
+          "core",
           "document",
           "https://docs.righttrack.io/right",
           "https://github.com/right",
@@ -79,7 +80,6 @@
           "see",
           "track",
           "track/right",
-          "transit",
           "transport"
         ],
         "MTA.html#loadFeed": [
@@ -100,6 +100,23 @@
         "docs": {},
         "a": {
           "docs": {},
+          "g": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "c": {
+                  "docs": {
+                    "index.html": {
+                      "ref": "index.html",
+                      "tf": 8.75
+                    }
+                  }
+                }
+              }
+            }
+          },
           "u": {
             "docs": {},
             "t": {
@@ -112,29 +129,12 @@
                     "docs": {
                       "index.html": {
                         "ref": "index.html",
-                        "tf": 10
+                        "tf": 8.75
                       },
                       "MTA.html": {
                         "ref": "MTA.html",
-                        "tf": 1.9230769230769231
+                        "tf": 2.083333333333333
                       }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "g": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "n": {
-                "docs": {},
-                "c": {
-                  "docs": {
-                    "MTA.html": {
-                      "ref": "MTA.html",
-                      "tf": 3.8461538461538463
                     }
                   }
                 }
@@ -162,11 +162,11 @@
                           "docs": {
                             "index.html": {
                               "ref": "index.html",
-                              "tf": 10
+                              "tf": 8.75
                             },
                             "MTA.html": {
                               "ref": "MTA.html",
-                              "tf": 1.9230769230769231
+                              "tf": 2.083333333333333
                             }
                           }
                         }
@@ -203,7 +203,7 @@
                     "docs": {
                       "MTA.html": {
                         "ref": "MTA.html",
-                        "tf": 1.9230769230769231
+                        "tf": 2.083333333333333
                       }
                     }
                   }
@@ -238,11 +238,11 @@
                                 "docs": {
                                   "index.html": {
                                     "ref": "index.html",
-                                    "tf": 10
+                                    "tf": 8.75
                                   },
                                   "MTA.html": {
                                     "ref": "MTA.html",
-                                    "tf": 1.9230769230769231
+                                    "tf": 2.083333333333333
                                   }
                                 }
                               }
@@ -266,7 +266,7 @@
                 },
                 "MTA.html": {
                   "ref": "MTA.html",
-                  "tf": 1901.923076923077
+                  "tf": 1902.0833333333333
                 },
                 "MTA.html#loadFeed": {
                   "ref": "MTA.html#loadFeed",
@@ -309,7 +309,7 @@
                 "docs": {
                   "MTA.html": {
                     "ref": "MTA.html",
-                    "tf": 1.9230769230769231
+                    "tf": 2.083333333333333
                   }
                 }
               }
@@ -345,11 +345,11 @@
                   "docs": {
                     "index.html": {
                       "ref": "index.html",
-                      "tf": 160
+                      "tf": 158.75
                     },
                     "MTA.html": {
                       "ref": "MTA.html",
-                      "tf": 3.8461538461538463
+                      "tf": 4.166666666666666
                     }
                   },
                   "t": {
@@ -382,7 +382,7 @@
                                               "docs": {
                                                 "MTA.html": {
                                                   "ref": "MTA.html",
-                                                  "tf": 1.9230769230769231
+                                                  "tf": 2.083333333333333
                                                 }
                                               }
                                             }
@@ -416,11 +416,11 @@
                   "docs": {
                     "index.html": {
                       "ref": "index.html",
-                      "tf": 160
+                      "tf": 158.75
                     },
                     "MTA.html": {
                       "ref": "MTA.html",
-                      "tf": 7.6923076923076925
+                      "tf": 8.333333333333332
                     }
                   },
                   "/": {
@@ -437,7 +437,7 @@
                               "docs": {
                                 "MTA.html": {
                                   "ref": "MTA.html",
-                                  "tf": 1.9230769230769231
+                                  "tf": 2.083333333333333
                                 }
                               }
                             }
@@ -458,11 +458,7 @@
                       "docs": {
                         "index.html": {
                           "ref": "index.html",
-                          "tf": 160
-                        },
-                        "MTA.html": {
-                          "ref": "MTA.html",
-                          "tf": 7.6923076923076925
+                          "tf": 158.75
                         },
                         "MTA.html#loadFeed": {
                           "ref": "MTA.html#loadFeed",
@@ -481,11 +477,11 @@
                           "docs": {
                             "index.html": {
                               "ref": "index.html",
-                              "tf": 10
+                              "tf": 8.75
                             },
                             "MTA.html": {
                               "ref": "MTA.html",
-                              "tf": 1.9230769230769231
+                              "tf": 2.083333333333333
                             }
                           }
                         }
@@ -523,7 +519,7 @@
                           },
                           "MTA.html": {
                             "ref": "MTA.html",
-                            "tf": 1.9230769230769231
+                            "tf": 2.083333333333333
                           }
                         }
                       }
@@ -575,6 +571,20 @@
                       "ref": "MTA.html",
                       "tf": 110
                     }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "MTA.html": {
+                    "ref": "MTA.html",
+                    "tf": 8.333333333333332
                   }
                 }
               }
@@ -738,7 +748,7 @@
                                                                         "docs": {
                                                                           "MTA.html": {
                                                                             "ref": "MTA.html",
-                                                                            "tf": 1.9230769230769231
+                                                                            "tf": 2.083333333333333
                                                                           }
                                                                         }
                                                                       }
@@ -799,7 +809,7 @@
                                                         "docs": {
                                                           "MTA.html": {
                                                             "ref": "MTA.html",
-                                                            "tf": 1.9230769230769231
+                                                            "tf": 2.083333333333333
                                                           }
                                                         }
                                                       }
@@ -842,7 +852,7 @@
                       "docs": {
                         "MTA.html": {
                           "ref": "MTA.html",
-                          "tf": 1.9230769230769231
+                          "tf": 2.083333333333333
                         }
                       }
                     }
@@ -860,7 +870,7 @@
               "docs": {
                 "MTA.html": {
                   "ref": "MTA.html",
-                  "tf": 1.9230769230769231
+                  "tf": 2.083333333333333
                 }
               }
             }
@@ -917,6 +927,7 @@
       "author",
       "callback",
       "class",
+      "core",
       "document",
       "feed",
       "function",
@@ -958,7 +969,7 @@
       "longname": "index",
       "name": "Right Track Transit: MTA",
       "tags": "index",
-      "summary": "A Right Track Transit implementation for the Metropolitan Transportation Authority",
+      "summary": "A Right Track Transit Agency implementation for the Metropolitan Transportation Authority",
       "description": "",
       "body": ""
     },
@@ -992,7 +1003,7 @@
       "name": "MTA",
       "tags": "MTA",
       "summary": "",
-      "description": "RightTrackTransitAgency implementation for the Metropolitan Transportation Authority (MTA). For more information, see: Right Track Transit Agency project (https://github.com/right-track/right-track-transit) Right Track Transit Agency documentation (https://docs.righttrack.io/right-track-transit)",
+      "description": "RightTrackTransitAgency implementation for the Metropolitan Transportation Authority (MTA). For more information, see: Right Track core project (https://github.com/right-track/right-track-core) Right Track core documentation (https://docs.righttrack.io/right-track-core)",
       "body": ""
     },
     "MTA.html#loadFeed": {
