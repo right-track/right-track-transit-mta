@@ -22,6 +22,6 @@
     "email": "dev@davidwaring.net"
   },
   "dependencies": {
-    "right-track-core": "github:right-track/right-track-core"
+    "right-track-core": "right-track/right-track-core"
   }
 }
